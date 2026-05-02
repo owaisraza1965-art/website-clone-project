@@ -24,5 +24,4 @@ It includes features like add to cart, dark mode, and responsive design.
 Open index.html in browser
 
 ## Live Website
-
-(Add your Vercel link here)
+https://website-clone-project-swart.vercel.app/
