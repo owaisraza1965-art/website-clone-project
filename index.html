@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoeStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a class="logo" href="#">ShoeStore</a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="icon-btn" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn" onclick="toggleCart()" aria-label="Open cart">🛒 <span id="cart-count">0</span></button>
+      <button class="icon-btn menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Shop the latest drops</span>
+      <h1>Modern Sneakers from Top Brands</h1>
+      <p>Discover premium footwear for every style and performance need. Fast shipping, easy returns, and curated collections.</p>
+      <div class="hero-actions">
+        <button onclick="scrollToProducts()">Browse Collection</button>
+        <a href="checkout.html" class="secondary-btn">View Checkout</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://picsum.photos/1400/900?random=1" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI5MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE0MDAiIGhlaWdodD0iOTAwIiBmaWxsPSIjMDA2NmZmIi8+PHRleHQgeD0iNzAwIiB5PSI0NTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSI0OCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iYm9sZCI+U25lYWtlcnM8L3RleHQ+PC9zdmc+'" alt="Stylish sneakers on display">
+    </div>
+  </section>
+
+  <section class="feature-strip">
+    <div><strong>Free shipping</strong> on orders over $75</div>
+    <div><strong>Secure checkout</strong> with trusted payment</div>
+    <div><strong>24/7 support</strong> for every order</div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="section-heading">
+      <span>Featured</span>
+      <h2>Popular Shoes for Every Brand</h2>
+    </div>
+
+    <div class="product-grid">
+      <article class="card">
+        <img src="https://www.bing.com/th/id/OIP.T1GHy_knTH-ZnKt2E97dAAHaHa?w=133&h=128&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0iIzAwNjZmZiIvPjwvc3ZnPg=="' alt="Adidas Ultraboost sneakers">
+        <div class="card-content">
+          <p class="brand">Adidas</p>
+          <h3>Adidas Ultraboost 22</h3>
+          <p class="price">$160</p>
+          <button onclick="addToCart('Nike Air Max 270',150)">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://th.bing.com/th/id/OIP.gx9wJsxxKLAecu0ToIjTCAHaHa?w=128&h=108&c=7&qlt=90&bgcl=9e0832&r=0&o=6&pid=13.1" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0iIzAwNjZmZiIvPjwvc3ZnPg=="' alt="Adidas NMD R1 sneakers">
+        <div class="card-content">
+          <p class="brand">Adidas</p>
+          <h3>Adidas NMD R1</h3>
+          <p class="price">$140</p>
+          <button onclick="addToCart('Adidas Ultraboost 22',160)">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://www.bing.com/th/id/OIP.bcUl49G8SOeQtBQyGrxTmQHaHa?w=145&h=170&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0iIzAwNjZmZiIvPjwvc3ZnPg=="' alt="Adidas Superstar sneakers">
+        <div class="card-content">
+          <p class="brand">Adidas</p>
+          <h3>Adidas Superstar</h3>
+          <p class="price">$100</p>
+          <button onclick="addToCart('Puma RS-X',110)">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://www.bing.com/th/id/OIP.95NvVvad4RvuM55AzlKtCgHaHa?w=199&h=189&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0iIzAwNjZmZiIvPjwvc3ZnPg=="' alt="Adidas Stan Smith sneakers">
+        <div class="card-content">
+          <p class="brand">Adidas</p>
+          <h3>Adidas Stan Smith</h3>
+          <p class="price">$95</p>
+          <button onclick="addToCart('New Balance 574',130)">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://www.bing.com/th/id/OIP.ZQ6llDH-fKKvHMo_YZziUgHaHa?w=175&h=180&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0iIzAwNjZmZiIvPjwvc3ZnPg=="' alt="Adidas Gazelle shoes">
+        <div class="card-content">
+          <p class="brand">Adidas</p>
+          <h3>Adidas Gazelle</h3>
+          <p class="price">$100</p>
+          <button onclick="addToCart('Chuck Taylor All Star',70)">Add to Cart</button>
+        </div>
+      </article>
+
+
+    </div>
+  </section>
+
+  <section class="highlights">
+    <div>
+      <h3>Trusted Brands</h3>
+      <p>We source the most popular brands and authentic releases with premium styling.</p>
+    </div>
+    <div>
+      <h3>Performance Ready</h3>
+      <p>Run, train, or lounge with comfortable footwear built for modern life.</p>
+    </div>
+    <div>
+      <h3>Easy Returns</h3>
+      <p>Hassle-free returns and support for a confident shopping experience.</p>
+    </div>
+  </section>
+</main>
+
+<div class="cart" id="cart">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button class="close-cart" onclick="toggleCart()">✕</button>
+  </div>
+  <ul id="cart-items"></ul>
+  <p class="cart-total">Total: $<span id="total">0</span></p>
+  <div class="cart-actions">
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="window.location.href='checkout.html'">Checkout</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 ShoeStore. Crafted for modern street style and performance.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | ShoeStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+  <div class="form-wrapper">
+    <div class="checkout-grid">
+      <div class="form-card panel">
+        <h2>Checkout</h2>
+        <p>Finish your order with secure billing and shipping details.</p>
+
+        <div class="input-group">
+          <label for="fullname">Full name</label>
+          <input id="fullname" type="text" placeholder="Jane Doe">
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email address</label>
+          <input id="email" type="email" placeholder="you@example.com">
+        </div>
+
+        <div class="input-group">
+          <label for="phone">Phone number</label>
+          <input id="phone" type="tel" placeholder="(123) 456-7890">
+        </div>
+
+        <div class="input-group">
+          <label for="address">Shipping address</label>
+          <input id="address" type="text" placeholder="123 Main Street">
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="city">City</label>
+            <input id="city" type="text" placeholder="Los Angeles">
+          </div>
+          <div class="input-group">
+            <label for="state">State / region</label>
+            <input id="state" type="text" placeholder="California">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="postal">Postal code</label>
+          <input id="postal" type="text" placeholder="90001">
+        </div>
+
+        <h3>Payment details</h3>
+        <div class="payment-methods">
+          <label class="payment-option">
+            <span>Credit card</span>
+            <input type="radio" name="payment" checked>
+          </label>
+          <label class="payment-option">
+            <span>Apple Pay</span>
+            <input type="radio" name="payment">
+          </label>
+          <label class="payment-option">
+            <span>Google Pay</span>
+            <input type="radio" name="payment">
+          </label>
+        </div>
+
+        <div class="input-group">
+          <label for="cardnumber">Card number</label>
+          <input id="cardnumber" type="text" placeholder="1234 5678 9012 3456">
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="expiry">Expiration</label>
+            <input id="expiry" type="text" placeholder="MM/YY">
+          </div>
+          <div class="input-group">
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="text" placeholder="123">
+          </div>
+        </div>
+
+        <label class="checkbox-label">
+          <input type="checkbox" checked>
+          Save payment details for faster checkout
+        </label>
+
+        <button class="primary-button" onclick="pay()">Complete order</button>
+      </div>
+
+      <aside class="summary-card">
+        <h3>Order summary</h3>
+        <p class="secondary-note">Review your items and shipping before completing the purchase.</p>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span>Free</span>
+        </div>
+        <div class="summary-row">
+          <span>Estimated tax</span>
+          <span>$0.00</span>
+        </div>
+        <div class="summary-total">
+          <span>Total</span>
+          <strong>$0.00</strong>
+        </div>
+
+        <div class="secondary-note" style="margin-top: 26px;">Secure payment processing with trusted encryption.</div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    function pay(){
+      alert("Payment Successful! Thank you for shopping with ShoeStore.");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

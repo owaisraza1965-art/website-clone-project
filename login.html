@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | ShoeStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+  <div class="form-wrapper">
+    <div class="form-card">
+      <div class="panel panel--accent">
+        <span class="highlight-pill">Trusted login</span>
+        <h2>Welcome Back</h2>
+        <p>Access your orders, saved favorites, and secure checkout experience.</p>
+
+        <ul class="stats-list">
+          <li><strong>Fast login</strong> with social sign-in options and secure sessions.</li>
+          <li><strong>Saved carts</strong> ready when you return to shop again.</li>
+          <li><strong>Priority support</strong> for account and order questions.</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <button class="social-btn" onclick="login()">Continue with Google</button>
+        <button class="social-btn" onclick="login()">Continue with Apple</button>
+
+        <div class="divider"><span>or</span></div>
+
+        <div class="input-group">
+          <label for="login-email">Email address</label>
+          <input id="login-email" type="email" placeholder="you@example.com">
+        </div>
+        <div class="input-group">
+          <label for="login-password">Password</label>
+          <input id="login-password" type="password" placeholder="Enter your password">
+        </div>
+
+        <button class="primary-button" onclick="login()">Sign In</button>
+
+        <div class="form-footer">
+          <a href="#">Forgot password?</a>
+          <a href="index.html">Back to shop</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login(){
+      alert("Login successful!");
+      window.location.href="index.html";
+    }
+  </script>
+</body>
+</html>
